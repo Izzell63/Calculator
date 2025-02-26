@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="decription" content="Calculator">
+    <meta name="keyword" content="html,web design,meta,lists,order">
+    <meta name="author" content="Hsu Yati Zaw">
+    <meta http--equiv="refresh" content="5" url="https://www.google.com">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: o;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin-top: 90px;
+            background: rgb(0, 0, 0);
+        }
+        h3{
+            color: white;
+            font-size: 40px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .Calculator {
+            background:  #f3dbba;
+            padding: 20px;
+            border-radius: 30px;
+        }  
+        .Calculator input {
+            border: 0;
+            outline: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 90px;
+            box-shadow: -7px -7px 20px #83838348, 5px 5px 15px #6c6c6c83;
+            background: transparent;
+            font-size: 20px;
+            color: #c96e5a;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .form .display{
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px 0;
+        }
+        .form .display input{
+            flex: 2;
+            font: 40px;
+            text-align: right;
+            box-shadow: -8px -8px 25px #a5784873;
+            border: 1px solid #e1e1e1;
+            border-radius: 20px;
+            width: 300px;
+        }
+        .form .equal{
+            background-color:  #ffa5287c;
+        }
+        .form .display {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .form #no{
+            font-family: 'Lucida Handwriting';
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS Calculator</h3>
+    <div class="container">
+        <div class="Calculator">
+            <form class="form">
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <div>
+                    <input type="button" value="Del" class="Del" id="no" onclick="display.value =display.value.toString().slice(0,-1) ">
+                    <input type="button" value="AC" class="AC" id="no" onclick="display.value ='' "> 
+                    <input type="button" value="%" class="%" id="no" onclick="display.value +='%' ">
+                    <input type="button" value="&divide;" class="divide" id="no" onclick="display.value +='/' ">
+                </div>
+                <div>
+                    <input type="button" value="7" class="7" id="no" onclick="display.value +='7' ">
+                    <input type="button" value="8" class="8" id="no" onclick="display.value +='8' "> 
+                    <input type="button" value="9" class="9" id="no" onclick="display.value +='9' ">
+                    <input type="button" value="*" class="multi" id="no" onclick="display.value +='*' ">
+                </div>
+                <div>
+                    <input type="button" value="4" class="4" id="no" onclick="display.value +='4' ">
+                    <input type="button" value="5" class="5" id="no" onclick="display.value +='5' "> 
+                    <input type="button" value="6" class="6" id="no" onclick="display.value +='6' ">
+                    <input type="button" value="-" class="minus" id="no" onclick="display.value +='-' ">
+                </div>
+                <div>
+                    <input type="button" value="1" class="1" id="no" onclick="display.value +='1' ">
+                    <input type="button" value="2" class="2" id="no" onclick="display.value +='2' "> 
+                    <input type="button" value="3" class="3" id="no" onclick="display.value +='3' ">
+                    <input type="button" value="+" class="plus" id="no" onclick="display.value +='+' ">
+                </div>
+                <div>
+                    <input type="button" value="00" class="00" id="no" onclick="display.value +='00' ">
+                    <input type="button" value="0" class="0" id="no" onclick="display.value +='0' "> 
+                    <input type="button" value="." class="dot" id="no" onclick="display.value +='.' ">
+                    <input type="button" value="=" class="equal" id="no" onclick="display.value =eval(display.value) ">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
